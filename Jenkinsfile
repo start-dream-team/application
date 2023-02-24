@@ -1,8 +1,8 @@
 pipeline {
   agent any
-  tools {
-    gradle 'my_gradle'
-  }
+//   tools {
+//     gradle 'my_gradle'
+//   }
   environment {
     gitName = 'lango'
     gitEmail = 'xmun777@naver.com'
