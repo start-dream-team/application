@@ -1,7 +1,7 @@
 pipeline {
   agent any
   tools {
-    gradle 'gradle-7.6'
+    gradle 'my-gradle'
   }
   environment {
     gitName = 'lango'
