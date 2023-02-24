@@ -2,6 +2,7 @@ pipeline {
   agent any
   tools {
     gradle 'my-gradle'
+    jdk 'Java-17'
   }
   environment {
     gitName = 'lango'
