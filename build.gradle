@@ -31,3 +31,13 @@ dependencies {
 tasks.named('test') {
     useJUnitPlatform()
 }
+
+
+bootJar {
+    mainClass = 'com.kakao.dreamteam.DreamteamapplicationApplication'
+}
+
+bootRun {
+    String activeProfile = System.properties['spring.profiles.active']
+    systemProperty "spring.profiles.active", activeProfile
+}
