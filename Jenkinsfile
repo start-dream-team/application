@@ -89,7 +89,7 @@ pipeline {
         sh "git config --global user.email ${gitEmail}"
         sh "git config --global user.name ${gitName}"
         sh "sed -i 's@${dockerHubRegistry}:.*@${dockerHubRegistry}:${currentBuild.number}@g' deploy/deploy.yml"
-        sh "git add ."
+        sh "git add deploy/deploy.yml"
         sh "git commit -m 'fix:${dockerHubRegistry} ${currentBuild.number} image versioning'"
         sh "git branch -M main"
         sh "git remote remove origin"
